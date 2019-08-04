@@ -58,7 +58,7 @@ public struct Stop: Codable {
     public enum CodingKeys: String, CodingKey {
             case id = "stop_id"
             case code = "stop_code"
-            case name = "agency_name"
+            case name = "stop_name"
             case description = "stop_desc"
             case latitude = "stop_lat"
             case longitude = "stop_lon"
