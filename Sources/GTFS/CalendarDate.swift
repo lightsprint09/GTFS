@@ -19,9 +19,9 @@ public struct CalendarDate: Codable {
         self.exceptionType = exceptionType
     }
     
-    public let serviceId: String
-    public let date: Date
-    public let exceptionType: ExceptionType
+    public var serviceId: String
+    public var date: Date
+    public var exceptionType: ExceptionType
     
     public enum CodingKeys: String, CodingKey {
         case serviceId = "service_id"

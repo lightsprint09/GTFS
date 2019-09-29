@@ -9,14 +9,14 @@ import Foundation
 
 public struct Agency: Codable {
     
-    public let id: String
-    public let name: String
-    public let url: URL
-    public let timezone: String
-    public let language: String?
-    public let phone: String?
-    public let email: String?
-    public let fareUrl: URL?
+    public var id: String
+    public var name: String
+    public var url: URL
+    public var timezone: String
+    public var language: String?
+    public var phone: String?
+    public var email: String?
+    public var fareUrl: URL?
 
     public enum CodingKeys: String, CodingKey {
         case id = "agency_id"

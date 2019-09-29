@@ -34,16 +34,16 @@ public struct Trip: Codable {
         case inbound
     }
     
-    public let routeId: String
-    public let serviceId: String
-    public let id: String
-    public let headsign: String?
-    public let shortName: String?
-    public let direction: Direction?
-    public let blockId: String?
-    public let shapeId: String?
-    public let wheelchairAccessible: WheelchairBoarding?
-    public let bikesAllowed: BikesAllowed?
+    public var routeId: String
+    public var serviceId: String
+    public var id: String
+    public var headsign: String?
+    public var shortName: String?
+    public var direction: Direction?
+    public var blockId: String?
+    public var shapeId: String?
+    public var wheelchairAccessible: WheelchairBoarding?
+    public var bikesAllowed: BikesAllowed?
     
     public enum CodingKeys: String, CodingKey {
             case routeId = "route_id"

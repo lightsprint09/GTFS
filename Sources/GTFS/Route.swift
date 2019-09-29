@@ -34,16 +34,16 @@ public struct Route: Codable {
     }
     
     
-    public let id: String
-    public let agencyId: String?
-    public let shortName: String
-    public let longName: String
-    public let description: String?
-    public let type: RouteType
-    public let url: URL?
-    public let color: String?
-    public let textColor: String?
-    public let sortOrder: Int?
+    public var id: String
+    public var agencyId: String?
+    public var shortName: String
+    public var longName: String
+    public var description: String?
+    public var type: RouteType
+    public var url: URL?
+    public var color: String?
+    public var textColor: String?
+    public var sortOrder: Int?
     
     public enum CodingKeys: String, CodingKey {
             case id = "route_id"

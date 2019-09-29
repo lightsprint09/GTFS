@@ -23,16 +23,16 @@ public struct Calendar: Codable {
     }
     
     
-    public let serviceId: String
-    public let monday: Bool
-    public let tuesday: Bool
-    public let wednesday: Bool
-    public let thursday: Bool
-    public let friday: Bool
-    public let saturday: Bool
-    public let sunday: Bool
-    public let startDate: Date
-    public let endDate: Date
+    public var serviceId: String
+    public var monday: Bool
+    public var tuesday: Bool
+    public var wednesday: Bool
+    public var thursday: Bool
+    public var friday: Bool
+    public var saturday: Bool
+    public var sunday: Bool
+    public var startDate: Date
+    public var endDate: Date
     
     public enum CodingKeys: String, CodingKey {
         case serviceId = "service_id"

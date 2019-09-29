@@ -35,16 +35,16 @@ public struct StopTime: Codable {
         case coordinateWithDriver
     }
     
-    public let tripId: String
-    public let arrivalTime: String?
-    public let departureTime: String?
-    public let stopId: String
-    public let stopSequence: Int
-    public let stopHeadsign: String?
-    public let pickupType: Boarding?
-    public let dropOffType: Boarding?
-    public let shapeDistTraveled: Double?
-    public let timepoint: Timepoint?
+    public var tripId: String
+    public var arrivalTime: String?
+    public var departureTime: String?
+    public var stopId: String
+    public var stopSequence: Int
+    public var stopHeadsign: String?
+    public var pickupType: Boarding?
+    public var dropOffType: Boarding?
+    public var shapeDistTraveled: Double?
+    public var timepoint: Timepoint?
     
     public enum CodingKeys: String, CodingKey {
         case tripId = "trip_id"

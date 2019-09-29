@@ -40,20 +40,20 @@ public struct Stop: Codable {
     }
     
     
-    public let id: String
-    public let code: String?
-    public let name: String
-    public let description: String?
-    public let latitude: Double
-    public let longitude: Double
-    public let zoneId: String?
-    public let url: URL?
-    public let locationType: LocationType?
-    public let parentStation: String?
-    public let stopTimezone: String?
-    public let wheelchairBoarding: WheelchairBoarding?
-    public let levelId: String?
-    public let platformCode: String?
+    public var id: String
+    public var code: String?
+    public var name: String
+    public var description: String?
+    public var latitude: Double
+    public var longitude: Double
+    public var zoneId: String?
+    public var url: URL?
+    public var locationType: LocationType?
+    public var parentStation: String?
+    public var stopTimezone: String?
+    public var wheelchairBoarding: WheelchairBoarding?
+    public var levelId: String?
+    public var platformCode: String?
     
     public enum CodingKeys: String, CodingKey {
             case id = "stop_id"
