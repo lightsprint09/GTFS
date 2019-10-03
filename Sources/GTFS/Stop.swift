@@ -70,5 +70,5 @@ public struct Stop: Codable {
             case wheelchairBoarding = "wheelchair_boarding"
             case levelId = "level_id"
             case platformCode = "platform_code"
-        }
+    }
 }
