@@ -13,7 +13,7 @@ public enum BikesAllowed: Int, Codable {
     case noBikes
 }
 
-public struct Trip: Codable {
+public struct Trip: Codable, Identifiable, Hashable {
     
     public init(routeId: String, serviceId: String, id: String, headsign: String?, shortName: String?, direction: Trip.Direction?, blockId: String?, shapeId: String?, wheelchairAccessible: WheelchairBoarding?, bikesAllowed: BikesAllowed?) {
         self.routeId = routeId
