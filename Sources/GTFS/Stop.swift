@@ -14,15 +14,30 @@ public enum WheelchairBoarding: Int, Codable {
 }
 
 public enum LocationType: Int, Codable {
-       case stopOrPlatform = 0
-       case station = 1
-       case stationEntracneOrExit = 2
-       case genericNode = 3
-       case boardingArea = 4
-   }
+    case stopOrPlatform = 0
+    case station = 1
+    case stationEntracneOrExit = 2
+    case genericNode = 3
+    case boardingArea = 4
+}
 
 public struct Stop: Codable {
-    public init(id: String, code: String?, name: String, description: String?, latitude: Double, longitude: Double, zoneId: String?, url: URL?, locationType: LocationType?, parentStation: String?, stopTimezone: String?, wheelchairBoarding: WheelchairBoarding?, levelId: String?, platformCode: String?) {
+    public init(
+        id: String,
+        code: String? = nil,
+        name: String,
+        description: String? = nil,
+        latitude: Double,
+        longitude: Double,
+        zoneId: String? = nil,
+        url: URL? = nil,
+        locationType: LocationType? = nil,
+        parentStation: String? = nil,
+        stopTimezone: String? = nil,
+        wheelchairBoarding: WheelchairBoarding? = nil,
+        levelId: String? = nil,
+        platformCode: String? = nil
+    ) {
         self.id = id
         self.code = code
         self.name = name
@@ -56,19 +71,19 @@ public struct Stop: Codable {
     public var platformCode: String?
     
     public enum CodingKeys: String, CodingKey {
-            case id = "stop_id"
-            case code = "stop_code"
-            case name = "stop_name"
-            case description = "stop_desc"
-            case latitude = "stop_lat"
-            case longitude = "stop_lon"
-            case zoneId = "zone_id"
-            case url = "stop_url"
-            case locationType = "location_type"
-            case parentStation = "parent_station"
-            case stopTimezone = "stop_timezone"
-            case wheelchairBoarding = "wheelchair_boarding"
-            case levelId = "level_id"
-            case platformCode = "platform_code"
+        case id = "stop_id"
+        case code = "stop_code"
+        case name = "stop_name"
+        case description = "stop_desc"
+        case latitude = "stop_lat"
+        case longitude = "stop_lon"
+        case zoneId = "zone_id"
+        case url = "stop_url"
+        case locationType = "location_type"
+        case parentStation = "parent_station"
+        case stopTimezone = "stop_timezone"
+        case wheelchairBoarding = "wheelchair_boarding"
+        case levelId = "level_id"
+        case platformCode = "platform_code"
     }
 }

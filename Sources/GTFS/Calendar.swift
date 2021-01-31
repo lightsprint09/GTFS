@@ -9,7 +9,18 @@ import Foundation
 
 public struct Calendar: Codable {
     
-    public init(serviceId: String, monday: Bool, tuesday: Bool, wednesday: Bool, thursday: Bool, friday: Bool, saturday: Bool, sunday: Bool, startDate: Date, endDate: Date) {
+    public init(
+        serviceId: String,
+        monday: Bool,
+        tuesday: Bool,
+        wednesday: Bool,
+        thursday: Bool,
+        friday: Bool,
+        saturday: Bool,
+        sunday: Bool,
+        startDate: Date,
+        endDate: Date
+    ) {
         self.serviceId = serviceId
         self.monday = monday
         self.tuesday = tuesday

@@ -20,7 +20,18 @@ public enum RouteType: Int, Codable {
     }
 
 public struct Route: Codable {
-    public init(id: String, agencyId: String?, shortName: String, longName: String, description: String?, type: RouteType, url: URL?, color: String?, textColor: String?, sortOrder: Int?) {
+    public init(
+        id: String,
+        agencyId: String? = nil,
+        shortName: String,
+        longName: String,
+        description: String? = nil,
+        type: RouteType,
+        url: URL? = nil,
+        color: String? = nil,
+        textColor: String? = nil,
+        sortOrder: Int? = nil
+    ) {
         self.id = id
         self.agencyId = agencyId
         self.shortName = shortName

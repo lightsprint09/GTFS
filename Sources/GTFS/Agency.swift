@@ -17,7 +17,27 @@ public struct Agency: Codable {
     public var phone: String?
     public var email: String?
     public var fareUrl: URL?
-
+    
+    public init(
+        id: String,
+        name: String,
+        url: URL,
+        timezone: String,
+        language: String? = nil,
+        phone: String? = nil,
+        email: String? = nil,
+        fareUrl: URL? = nil
+    ) {
+            self.id = id
+            self.name = name
+            self.url = url
+            self.timezone = timezone
+            self.language = language
+            self.phone = phone
+            self.email = email
+            self.fareUrl = fareUrl
+    }
+    
     public enum CodingKeys: String, CodingKey {
         case id = "agency_id"
         case name = "agency_name"
@@ -27,17 +47,6 @@ public struct Agency: Codable {
         case phone = "agency_phone"
         case fareUrl = "agency_fare_url"
         case email = "agency_email"
-    }
-    
-    public init(id: String, name: String, url: URL, timezone: String, language: String?, phone: String?, email: String?, fareUrl: URL?) {
-            self.id = id
-            self.name = name
-            self.url = url
-            self.timezone = timezone
-            self.language = language
-            self.phone = phone
-            self.email = email
-            self.fareUrl = fareUrl
     }
         
 }

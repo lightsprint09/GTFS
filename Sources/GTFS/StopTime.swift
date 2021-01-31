@@ -14,7 +14,18 @@ public enum Timepoint: Int, Codable {
 
 public struct StopTime: Codable {
     
-    public init(tripId: String, arrivalTime: String?, departureTime: String?, stopId: String, stopSequence: Int, stopHeadsign: String?, pickupType: StopTime.Boarding?, dropOffType: StopTime.Boarding?, shapeDistTraveled: Double?, timepoint: Timepoint?) {
+    public init(
+        tripId: String,
+        arrivalTime: String? = nil,
+        departureTime: String? = nil,
+        stopId: String,
+        stopSequence: Int,
+        stopHeadsign: String? = nil,
+        pickupType: StopTime.Boarding? = nil,
+        dropOffType: StopTime.Boarding? = nil,
+        shapeDistTraveled: Double? = nil,
+        timepoint: Timepoint? = nil
+    ) {
         self.tripId = tripId
         self.arrivalTime = arrivalTime
         self.departureTime = departureTime
@@ -26,7 +37,6 @@ public struct StopTime: Codable {
         self.shapeDistTraveled = shapeDistTraveled
         self.timepoint = timepoint
     }
-    
     
     public enum Boarding: Int, Codable {
         case scheduled = 0
@@ -59,15 +69,3 @@ public struct StopTime: Codable {
         case timepoint = "timepoint"
     }
 }
-
-
-// trip_id                  (Required)
-// arrival_time             (Optional) - Actually required but can be empty
-// departure_time           (Optional) - Actually required but can be empty
-// stop_id                  (Required)
-// stop_sequence            (Required)
-// stop_headsign            (Optional)
-// pickup_type              (Optional)
-// drop_off_type            (Optional)
-// shape_dist_traveled      (Optional)
-// timepoint                (Optional)

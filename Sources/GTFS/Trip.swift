@@ -15,7 +15,18 @@ public enum BikesAllowed: Int, Codable {
 
 public struct Trip: Codable {
     
-    public init(routeId: String, serviceId: String, id: String, headsign: String?, shortName: String?, direction: Trip.Direction?, blockId: String?, shapeId: String?, wheelchairAccessible: WheelchairBoarding?, bikesAllowed: BikesAllowed?) {
+    public init(
+        routeId: String,
+        serviceId: String,
+        id: String,
+        headsign: String? = nil,
+        shortName: String? = nil,
+        direction: Trip.Direction? = nil,
+        blockId: String? = nil,
+        shapeId: String? = nil,
+        wheelchairAccessible: WheelchairBoarding? = nil,
+        bikesAllowed: BikesAllowed? = nil
+    ) {
         self.routeId = routeId
         self.serviceId = serviceId
         self.id = id
