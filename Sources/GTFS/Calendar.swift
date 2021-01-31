@@ -9,15 +9,20 @@ import Foundation
 
 public struct Calendar: Codable {
     
+    public enum Availability: Int, Codable {
+        case available = 1
+        case unavailable = 0
+    }
+    
     public init(
         serviceId: String,
-        monday: Bool,
-        tuesday: Bool,
-        wednesday: Bool,
-        thursday: Bool,
-        friday: Bool,
-        saturday: Bool,
-        sunday: Bool,
+        monday: Availability,
+        tuesday: Availability,
+        wednesday: Availability,
+        thursday: Availability,
+        friday: Availability,
+        saturday: Availability,
+        sunday: Availability,
         startDate: Date,
         endDate: Date
     ) {
@@ -35,13 +40,13 @@ public struct Calendar: Codable {
     
     
     public var serviceId: String
-    public var monday: Bool
-    public var tuesday: Bool
-    public var wednesday: Bool
-    public var thursday: Bool
-    public var friday: Bool
-    public var saturday: Bool
-    public var sunday: Bool
+    public var monday: Availability
+    public var tuesday: Availability
+    public var wednesday: Availability
+    public var thursday: Availability
+    public var friday: Availability
+    public var saturday: Availability
+    public var sunday: Availability
     public var startDate: Date
     public var endDate: Date
     

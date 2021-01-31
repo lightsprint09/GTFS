@@ -7,12 +7,13 @@
 
 import Foundation
 
-public enum ExceptionType: Int, Codable {
-    case added = 1
-    case removed = 2
-}
-
 public struct CalendarDate: Codable {
+    
+    public enum ExceptionType: Int, Codable {
+        case added = 1
+        case removed = 2
+    }
+    
     public init(serviceId: String, date: Date, exceptionType: ExceptionType) {
         self.serviceId = serviceId
         self.date = date
